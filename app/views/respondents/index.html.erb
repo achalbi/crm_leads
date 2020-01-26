@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Respondents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Name</th>
+      <th>Lead date</th>
+      <th>Email</th>
+      <th>Lead source</th>
+      <th>Select executive</th>
+      <th>Phone</th>
+      <th>Lead type</th>
+      <th>Company name</th>
+      <th>Company address</th>
+      <th>Site</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @respondents.each do |respondent| %>
+      <tr>
+        <td><%= respondent.title %></td>
+        <td><%= respondent.name %></td>
+        <td><%= respondent.lead_date %></td>
+        <td><%= respondent.email %></td>
+        <td><%= respondent.lead_source %></td>
+        <td><%= respondent.select_executive %></td>
+        <td><%= respondent.phone %></td>
+        <td><%= respondent.lead_type %></td>
+        <td><%= respondent.company_name %></td>
+        <td><%= respondent.company_address %></td>
+        <td><%= respondent.site_name %></td>
+        <td><%= respondent.site_address %></td>
+        <td><%= link_to 'Show', respondent %></td>
+        <td><%= link_to 'Edit', edit_respondent_path(respondent) %></td>
+        <td><%= link_to 'Destroy', respondent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Respondent', new_respondent_path %>

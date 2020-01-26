@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_date: 2020-01-09
+  floor_count: 1
+  lift_type: MyString
+  floor_destination: MyString
+  machine_mounting_room: MyString
+  stops_count: 1
+  cabin_type: MyString
+  opening_count: 1
+  volume: MyString
+  shaft_width: 1
+  shaft_depth: 1
+  lifts_count: 1
+  capacity: MyString
+  capacity_units: MyString
+
+two:
+  order_date: 2020-01-09
+  floor_count: 1
+  lift_type: MyString
+  floor_destination: MyString
+  machine_mounting_room: MyString
+  stops_count: 1
+  cabin_type: MyString
+  opening_count: 1
+  volume: MyString
+  shaft_width: 1
+  shaft_depth: 1
+  lifts_count: 1
+  capacity: MyString
+  capacity_units: MyString

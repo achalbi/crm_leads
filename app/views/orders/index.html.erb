@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order date</th>
+      <th>Floor count</th>
+      <th>Lift type</th>
+      <th>Floor destination</th>
+      <th>Machine mounting room</th>
+      <th>Stops count</th>
+      <th>Cabin type</th>
+      <th>Opening count</th>
+      <th>Volume</th>
+      <th>Shaft width</th>
+      <th>Shaft depth</th>
+      <th>Lifts count</th>
+      <th>Capacity</th>
+      <th>Capacity units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.order_date %></td>
+        <td><%= order.floor_count %></td>
+        <td><%= order.lift_type %></td>
+        <td><%= order.floor_destination %></td>
+        <td><%= order.machine_mounting_room %></td>
+        <td><%= order.stops_count %></td>
+        <td><%= order.cabin_type %></td>
+        <td><%= order.opening_count %></td>
+        <td><%= order.volume %></td>
+        <td><%= order.shaft_width %></td>
+        <td><%= order.shaft_depth %></td>
+        <td><%= order.lifts_count %></td>
+        <td><%= order.capacity %></td>
+        <td><%= order.capacity_units %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

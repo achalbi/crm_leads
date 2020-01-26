@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <strong>Floor count:</strong>
+  <%= @order.floor_count %>
+</p>
+
+<p>
+  <strong>Lift type:</strong>
+  <%= @order.lift_type %>
+</p>
+
+<p>
+  <strong>Floor destination:</strong>
+  <%= @order.floor_destination %>
+</p>
+
+<p>
+  <strong>Machine mounting room:</strong>
+  <%= @order.machine_mounting_room %>
+</p>
+
+<p>
+  <strong>Stops count:</strong>
+  <%= @order.stops_count %>
+</p>
+
+<p>
+  <strong>Cabin type:</strong>
+  <%= @order.cabin_type %>
+</p>
+
+<p>
+  <strong>Opening count:</strong>
+  <%= @order.opening_count %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @order.volume %>
+</p>
+
+<p>
+  <strong>Shaft width:</strong>
+  <%= @order.shaft_width %>
+</p>
+
+<p>
+  <strong>Shaft depth:</strong>
+  <%= @order.shaft_depth %>
+</p>
+
+<p>
+  <strong>Lifts count:</strong>
+  <%= @order.lifts_count %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @order.capacity %>
+</p>
+
+<p>
+  <strong>Capacity units:</strong>
+  <%= @order.capacity_units %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

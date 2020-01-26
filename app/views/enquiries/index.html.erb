@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Enquiries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Enquiry date</th>
+      <th>Floor count</th>
+      <th>Lift type</th>
+      <th>Floor destination</th>
+      <th>Machine mounting room</th>
+      <th>Stops count</th>
+      <th>Cabin type</th>
+      <th>Openings count</th>
+      <th>Shaft width</th>
+      <th>Shaft depth</th>
+      <th>Lifts count</th>
+      <th>Capacity</th>
+      <th>Capacity units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enquiries.each do |enquiry| %>
+      <tr>
+        <td><%= enquiry.enquiry_date %></td>
+        <td><%= enquiry.floor_count %></td>
+        <td><%= enquiry.lift_type %></td>
+        <td><%= enquiry.floor_destination %></td>
+        <td><%= enquiry.machine_mounting_room %></td>
+        <td><%= enquiry.stops_count %></td>
+        <td><%= enquiry.cabin_type %></td>
+        <td><%= enquiry.openings_count %></td>
+        <td><%= enquiry.shaft_width %></td>
+        <td><%= enquiry.shaft_depth %></td>
+        <td><%= enquiry.lifts_count %></td>
+        <td><%= enquiry.capacity %></td>
+        <td><%= enquiry.capacity_units %></td>
+        <td><%= link_to 'Show', enquiry %></td>
+        <td><%= link_to 'Edit', edit_enquiry_path(enquiry) %></td>
+        <td><%= link_to 'Destroy', enquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enquiry', new_enquiry_path %>

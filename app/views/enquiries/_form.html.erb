@@ -1,0 +1,82 @@
+<%= form_with(model: enquiry, local: true) do |form| %>
+  <% if enquiry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(enquiry.errors.count, "error") %> prohibited this enquiry from being saved:</h2>
+
+      <ul>
+      <% enquiry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :enquiry_date %>
+    <%= form.text_field :enquiry_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :floor_count %>
+    <%= form.number_field :floor_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lift_type %>
+    <%= form.text_field :lift_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :floor_destination %>
+    <%= form.text_field :floor_destination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :machine_mounting_room %>
+    <%= form.text_field :machine_mounting_room %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stops_count %>
+    <%= form.number_field :stops_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cabin_type %>
+    <%= form.text_field :cabin_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :openings_count %>
+    <%= form.number_field :openings_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shaft_width %>
+    <%= form.text_field :shaft_width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shaft_depth %>
+    <%= form.text_field :shaft_depth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lifts_count %>
+    <%= form.number_field :lifts_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :capacity %>
+    <%= form.text_field :capacity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :capacity_units %>
+    <%= form.text_field :capacity_units %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

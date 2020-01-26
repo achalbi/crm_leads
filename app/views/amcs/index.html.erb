@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Amcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From date</th>
+      <th>To date</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Tax type</th>
+      <th>Total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amcs.each do |amc| %>
+      <tr>
+        <td><%= amc.from_date %></td>
+        <td><%= amc.to_date %></td>
+        <td><%= amc.type %></td>
+        <td><%= amc.price %></td>
+        <td><%= amc.tax_type %></td>
+        <td><%= amc.total %></td>
+        <td><%= link_to 'Show', amc %></td>
+        <td><%= link_to 'Edit', edit_amc_path(amc) %></td>
+        <td><%= link_to 'Destroy', amc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amc', new_amc_path %>

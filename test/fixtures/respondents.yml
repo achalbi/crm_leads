@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  name: MyString
+  string: MyString
+  lead_date: 2020-01-09
+  email: MyString
+  lead_source: MyString
+  select_executive: MyString
+  phone: MyString
+  lead_type: MyString
+  company_name: MyString
+  company_address: MyString
+  site: MyString
+
+two:
+  title: MyString
+  name: MyString
+  string: MyString
+  lead_date: 2020-01-09
+  email: MyString
+  lead_source: MyString
+  select_executive: MyString
+  phone: MyString
+  lead_type: MyString
+  company_name: MyString
+  company_address: MyString
+  site: MyString

@@ -1,0 +1,47 @@
+<%= form_with(model: amc, local: true) do |form| %>
+  <% if amc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(amc.errors.count, "error") %> prohibited this amc from being saved:</h2>
+
+      <ul>
+      <% amc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :from_date %>
+    <%= form.date_select :from_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to_date %>
+    <%= form.date_select :to_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax_type %>
+    <%= form.text_field :tax_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total %>
+    <%= form.number_field :total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

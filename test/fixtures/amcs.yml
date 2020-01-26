@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_date: 2020-01-09
+  to_date: 2020-01-09
+  type: 
+  price: 1
+  tax_type: MyString
+  total: 1
+
+two:
+  from_date: 2020-01-09
+  to_date: 2020-01-09
+  type: 
+  price: 1
+  tax_type: MyString
+  total: 1
